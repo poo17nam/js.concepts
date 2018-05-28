@@ -5,6 +5,7 @@
 
 //Example 1
 function sum(a, b) {
+  console.log("inside sum");
   return new Promise(res => {
     var c = a + b
     res(c)
@@ -12,6 +13,7 @@ function sum(a, b) {
 }
 
 function subtract(a, b) {
+  console.log("inside subtract");
   return new Promise(res => {
     var c = a - b
     res(c)
@@ -35,7 +37,7 @@ new Promise((resolve, reject) => {
   console.log(result)
   return result + 2
 }).then((result) => {
-  throw new Error("Failed here")
+  //throw new Error("Failed here")
   console.log(result)
   return result + 2
 }).then((result) => {

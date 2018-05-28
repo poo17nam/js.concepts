@@ -12,6 +12,13 @@
       */
 
 //Example 1
+function sum(a, b) {
+  return new Promise(res => {
+    var c = a + b
+    res(c)
+  })
+}
+
 sum(1, 2).then((x) => {
   console.log(x)
 })    //Prints 3
@@ -25,10 +32,3 @@ function wait(period) {
 }
 
 wait(2000).then(() => console.log("Hello"));  // Prints 'Hello' after 2s
-
-function sum(a, b) {
-  return new Promise(res => {
-    var c = a + b
-    res(c)
-  })
-}
